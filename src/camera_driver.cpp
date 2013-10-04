@@ -35,6 +35,7 @@
 
 #include <ros/ros.h>
 #include <sensor_msgs/Image.h>
+#include <std_msgs/Header.h>
 #include <image_transport/camera_publisher.h>
 #include <dynamic_reconfigure/server.h>
 #include <dynamic_reconfigure/SensorLevels.h>
@@ -146,6 +147,9 @@ void CameraDriver::ReconfigureCallback(UVCCameraConfig &new_config, uint32_t lev
 }
 
 void CameraDriver::ImageCallback(uvc_frame_t *frame) {
+  // TODO: Switch to {frame}'s timestamp once that becomes reliable.
+  ros::Time timestamp = ros::Time::now();
+
   boost::recursive_mutex::scoped_lock(mutex_);
 
   assert(state_ == kRunning);
@@ -166,8 +170,13 @@ void CameraDriver::ImageCallback(uvc_frame_t *frame) {
   image->data.resize(image->step * image->height);
   memcpy(&(image->data[0]), rgb_frame_->data, rgb_frame_->data_bytes);
 
-  sensor_msgs::CameraInfo::ConstPtr cinfo(
+  sensor_msgs::CameraInfo::Ptr cinfo(
     new sensor_msgs::CameraInfo(cinfo_manager_.getCameraInfo()));
+
+  image->header.frame_id = config_.frame_id;
+  image->header.stamp = timestamp;
+  cinfo->header.frame_id = config_.frame_id;
+  cinfo->header.stamp = timestamp;
 
   cam_pub_.publish(image, cinfo);
 
