@@ -1,3 +1,24 @@
+## libuvc_ros - 0.0.6-0
+
+User `ken@kcore.int80k.com` released the packages in the `libuvc_ros` repository by running `/usr/bin/bloom-release libuvc_ros --track hydro --rosdistro hydro` on `Thu, 19 Dec 2013 18:55:19 -0000`
+
+These packages were released:
+- `libuvc_camera`
+- `libuvc_ros`
+
+Version of package(s) in repository `libuvc_ros`:
+- rosdistro version: `0.0.5-0`
+- old version: `0.0.5-0`
+- new version: `0.0.6-0`
+
+Versions of tools used:
+- bloom version: `0.4.4`
+- catkin_pkg version: `0.1.20`
+- rosdep version: `0.10.22`
+- rosdistro version: `0.2.14`
+- vcstools version: `0.1.31`
+
+
 ## libuvc_ros - 0.0.5-0
 
 User `ken@kcore.int80k.com` released the packages in the `libuvc_ros` repository by running `/usr/bin/bloom-release libuvc_ros --track hydro --rosdistro hydro` on `Fri, 04 Oct 2013 21:00:49 -0000`
