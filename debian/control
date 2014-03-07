@@ -1,0 +1,12 @@
+Source: ros-indigo-libuvc-ros
+Section: misc
+Priority: extra
+Maintainer: Ken Tossell <ken@tossell.net>
+Build-Depends: debhelper (>= 7.0.50~), ros-indigo-catkin
+Homepage: http://ros.org/wiki/libuvc_ros
+Standards-Version: 3.9.2
+
+Package: ros-indigo-libuvc-ros
+Architecture: any
+Depends: ${shlibs:Depends}, ${misc:Depends}, ros-indigo-libuvc-camera
+Description: libuvc_ros metapackage
