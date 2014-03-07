@@ -1,3 +1,24 @@
+## libuvc_ros (indigo) - 0.0.7-0
+
+User `ken@kcore.int80k.com` released the packages in the `libuvc_ros` repository into the `indigo` distro by running `/usr/bin/bloom-release libuvc_ros --track indigo --rosdistro indigo --new-track` on `Fri, 07 Mar 2014 01:11:56 -0000`
+
+These packages were released:
+- `libuvc_camera`
+- `libuvc_ros`
+
+Version of package(s) in repository `libuvc_ros`:
+- rosdistro version: `null`
+- old version: `null`
+- new version: `0.0.7-0`
+
+Versions of tools used:
+- bloom version: `0.5.2`
+- catkin_pkg version: `0.1.25`
+- rosdep version: `0.10.25`
+- rosdistro version: `0.3.1`
+- vcstools version: `0.1.31`
+
+
 ## libuvc_ros - 0.0.6-0
 
 User `ken@kcore.int80k.com` released the packages in the `libuvc_ros` repository by running `/usr/bin/bloom-release libuvc_ros --track hydro --rosdistro hydro` on `Thu, 19 Dec 2013 18:55:19 -0000`
